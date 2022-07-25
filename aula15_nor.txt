@@ -1,0 +1,3 @@
+db.produtos.find({$nor: [{qualidade: "alta"}, {qualidade: {$exists: false}}]}).pretty()
+-- Cada um dos atributos do nor serão negados
+-- Encontra todos os documentos com o atributo qualidade diferentes de "alta"

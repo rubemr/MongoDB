@@ -1,0 +1,5 @@
+use loja
+
+db.produtos.insert({cdProduto: 1, nmProduto: "Churros"})
+
+db.produtos.find()

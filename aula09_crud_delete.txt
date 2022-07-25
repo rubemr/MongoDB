@@ -1,0 +1,16 @@
+db.lojas.remove()
+-- Remove todos os documentos
+
+db.lojas.remove({"cod":2})
+-- Remove todos os registros que encontrar
+
+db.lojas.remove({"cod":5, 1})
+-- Também é possível passar a quantidade de documentos que serão removidos
+
+db.lojas.deleteOne({"cod":3})
+-- deleteOne remove um documento
+-- Remove apenas a primeira informação que encontrar
+
+db.lojas.deleteMany({"cod":2}, {$set: {"nmEndereco": "Rua Cabeleira, 1"}})
+-- deleteMany remove vários documentos
+-- Remove todos os registros que encontrar

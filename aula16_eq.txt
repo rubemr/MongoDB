@@ -1,0 +1,5 @@
+db.produtos.find({cdProduto: {$eq: 5}}).pretty()
+-- Encontrar quais documentos têm o cdProduto igual a 5
+
+db.produtos.find({cdProduto: {$not: {$eq: 5}}}).pretty()
+-- Encontrar quais documentos não têm o cdProduto igual a 5

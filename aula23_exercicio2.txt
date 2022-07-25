@@ -1,0 +1,15 @@
+db.clientes.find({}, {inAtivo: 0}).pretty()
+
+var cliente = db.clientes.find({}, {inAtivo: 0})
+-- Não usar o pretty quando for salvar em variáveis
+
+cliente
+-- Se digitar a variável, o mongo retorna o find
+
+db.produtos.find({cdProduto: {$lte: 2}}).pretty()
+
+db.produtos.find({cdProduto: {$lte: 2}}, {qualidade: 0}).pretty()
+
+var produtos = db.produtos.find({cdProduto: {$lte: 2}}, {qualidade: 0})
+
+db.vendas.insertOne({cliente: cliente, produtos: produtos})

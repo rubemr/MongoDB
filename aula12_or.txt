@@ -1,0 +1,4 @@
+db.produtos.find({$or: [{nmProduto: "Farinha"}, {qualidade: "alta"}]}).pretty()
+
+db.produtos.findOne({$or: [{nmProduto: "Farinha"}, {qualidade: "alta"}]})
+-- O findOne já formata, então não precisa do pretty

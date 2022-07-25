@@ -1,0 +1,5 @@
+db.clientes.insertOne({cdCliente: 1, nmCliente: "Lucas", inAtivo: 1})
+
+db.vendas.insertOne({cdCliente: 1, produtos: [{cdProduto: 1}, {cdProduto: 2}]})
+
+db.produtos.find({cdProduto: 1}).pretty()

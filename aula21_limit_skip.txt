@@ -1,0 +1,10 @@
+db.produtos.find({}).skip(1).pretty()
+-- skip pula o primeiro
+
+db.produtos.find({}).limit(3).pretty()
+-- limita a quantidade de aquivos retornados
+
+db.produtos.find({}, {cdProduto: 1, nmProduto: 1}).limit(3).pretty()
+
+db.produtos.find({}, {cdProduto: 1, nmProduto: 1}).skip(1 * 2).limit(3).pretty()
+-- O skip pode ser usado para fazer a paginação

@@ -1,0 +1,4 @@
+db.produtos.insert({cdProduto: 2, nmProduto: "Farinha"})
+
+db.produtos.insert({cdProduto: 3, nmProduto: "Arroz", dtValidade: new Date()})
+-- A coleção se adapta a medida que se insere ou remove informações

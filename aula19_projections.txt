@@ -1,0 +1,8 @@
+db.produtos.find({}, {cdProduto: 1}).pretty()
+-- Segundo parâmetro do find são os campos que desejo retornar
+
+db.produtos.find({}, {cdProduto: 1, nmProduto: 1}).pretty()
+-- Posso adicionar mais de um campo
+
+db.produtos.find({}, {qualidade: 0}).pretty()
+-- Quando desejo omitir um campo coloco 0

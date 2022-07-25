@@ -1,0 +1,2 @@
+db.produtos.find({cdProduto: {$ne: 5}}).pretty()
+-- Encontrar quais documentos não têm o cdProduto igual a 5

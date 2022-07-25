@@ -1,0 +1,12 @@
+db.lojas.insertOne({cod:1, nmEndereco: "Rua Fulano, 25"})
+-- insertOne insere 1 documento
+-- Se a coleção que você for inserir não existe, o mongo cria automaticamente 
+
+-- db.lojas.insert({cod:2, nmEndereco: "Rua Xico, 10"}, {cod:3, nmEndereco: "Rua Xiu, 1"})
+-- insert insere 1 ou mais documentos
+-- Para inserir mais de um documento, é preciso passar os objetos através de um vetor
+
+db.lojas.insert([{cod:3, nmEndereco: "Rua Xiu, 1"}, {cod:4, nmEndereco: "Rua Irineu, 15"}])
+
+db.lojas.insertMany([{cod:5, nmEndereco: "Rua Casal, 250"}, {cod:6, nmEndereco: "Rua Fausto, 11"}])
+-- insertMany sempre insere mais de 1 documento

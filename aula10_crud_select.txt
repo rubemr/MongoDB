@@ -1,0 +1,18 @@
+db.produtos.find()
+db.produtos.find({})
+-- Retorna todos os documentos
+
+db.produtos.find().pretty()
+-- Retorna todos os documentos formatados
+
+db.produtos.find({cdProduto: 3})
+-- Retorna um ou mais documentos específicos
+
+db.produtos.find({cdProduto: 3}).pretty()
+-- Retorna um ou mais documentos específicos formatados
+
+db.produtos.find({cdProduto: 3}, {qualidade: "alta"}).pretty()
+-- Também é possível passar mais de um parâmetro no find
+
+db.produtos.findOne({cdProduto: 5})
+-- Retorna um documento específico formatado

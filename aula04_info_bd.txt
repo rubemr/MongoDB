@@ -1,0 +1,10 @@
+show dbs
+
+show collections
+
+db.stats()
+-- Apresenta em qual base de dados você está
+-- e informações sobre o db
+
+db.loja.produtos.stats()
+-- Apresenta informações sobre a collection

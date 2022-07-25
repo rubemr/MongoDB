@@ -1,0 +1,11 @@
+db.produtos.find({preco: {$gt: 5}}).pretty()
+-- Encontrar quais documentos têm o preco maior que 5
+
+db.produtos.find({preco: {$lt: 5}}).pretty()
+-- Encontrar quais documentos têm o preco menor que 5
+
+db.produtos.find({preco: {$lte: 5.3}}).pretty()
+-- Encontrar quais documentos têm o preco menor ou igual a 5.3
+
+db.produtos.find({$and: [{preco: {$gte: 2.3}}, {preco: {$lte: 9.55}}]}).pretty()
+-- Encontrar quais documentos têm o preco maior ou igual a 2.3 e menor ou igual a 9.55

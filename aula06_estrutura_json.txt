@@ -1,0 +1,19 @@
+db.produtos.insert({
+    cdProduto: 4, 
+    nmProduto: "Óleo", 
+    dtValidade: new Date(), 
+    tags:["óleo", "vegetal", "mineral"]
+})
+
+db.produtos.find().pretty()
+
+db.produtos.insert({
+    cdProduto: 5, 
+    nmProduto: "Feijão", 
+    dtValidade: new Date(), 
+    tags:["carioca"], 
+    fornecedor: {
+        cdFornecedor: 1, 
+        nmFornecedor: "Fazenda do Beto"
+    }
+})

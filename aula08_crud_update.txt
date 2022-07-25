@@ -1,0 +1,12 @@
+db.lojas.update({"cod":2}, {$set: {"nmEndereco": "Rua Cabeleira, 1"}})
+-- update altera/subtitui um documento
+-- Altera apenas a primeira informação que encontrar
+-- Sem o set, o update subtitui o documento
+
+db.lojas.updateOne({"cod":1}, {$set: {"nmEndereco": "Rua Praia, 3"}})
+-- updateOne altera um documento
+-- Altera apenas a primeira informação que encontrar
+
+db.lojas.updateMany({"cod":2}, {$set: {"nmEndereco": "Rua Cabeleira, 1"}})
+-- updateOne altera vários documentos
+-- Altera todos os registros que encontrar

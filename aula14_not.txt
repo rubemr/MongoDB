@@ -1,0 +1,2 @@
+db.produtos.find({qualidade: {$not: {$eq: "alta"}}}).pretty()
+-- Encontrar quais documentos não têm o atributo qualidade "alta"

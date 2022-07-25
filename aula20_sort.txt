@@ -1,0 +1,8 @@
+db.produtos.find({}, {}).sort({cdProduto: -1}).pretty()
+-- Ordernar de forma decrescente tem que colocar o -1 no sort
+
+db.produtos.find({}, {}).sort({cdProduto: 1}).pretty()
+-- Ordernar de forma crescente tem que colocar o 1 no sort
+
+db.produtos.find({}, {cdProduto: 1, nmProduto: 1}).sort({qualidade: -1, cdProduto: 1}).pretty()
+-- É possível passar mais de um parâmetro no sort
